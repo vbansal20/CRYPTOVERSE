@@ -1,22 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import { Button } from '@mui/material';
+import SideBar from './Components/SideBar';
+import Home from './Components/Home';
+import CryptoCoins from './Components/CryptoCoins';
+import News from './Components/News';
+import Exchanges from './Components/Exchanges';
+import { Routes, Route } from 'react-router';
+import { contentStyle } from './Styles/ContentStyles';
 
 function App() {
+  const { classes } = contentStyle();
   return (
-    <div className="App">
+    <div>
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <SideBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cryptocurrencies" element={<CryptoCoins />} />
+          <Route path="/exchanges" element={<Exchanges />} />
+          <Route path="/news" element={<News />} />
+        </Routes>
       </header>
     </div>
   );
