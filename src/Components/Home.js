@@ -17,60 +17,56 @@ const Home = () => {
 
     return (
         <div>
-            <Grid container display="flex" spacing={10}>
-                <Grid item sm={5}>
-                    <Typography variant="h1" align='center' className={classes.boldHeading}>
+            <Grid container display="flex" justify="center" alignItems="center" spacing={10}>
+                <Grid item sm={7}>
+                    <Typography variant="h2" className={classes.boldHeading} style={{paddingLeft: "80px"}}>
                         Global Crypto Stats
                     </Typography>
                 </Grid>
-                <Grid item sm={7}>
-                    <img src={home_image} width="400px" height="400px" />
+                <Grid item sm={5}>
+                    <img src={home_image} width="300px" height="300px" />
                 </Grid>
             </Grid>
 
             <br />
             <div>
-                <Grid container display="flex" spacing={4}>
-
-                    <Grid item spacing={4} direction="column">
-                        <Grid item>
-                            <Card >
-                                <CardContent>
-                                    <Typography variant="h5" component="div">
-                                        Total Cryptocurrencies
-                                    </Typography>
-                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                        {globalStats.totalCoins}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid item sm={4}>
-                            <Card>
-                                <CardContent>
-                                    <Typography variant="h5" component="div">
-                                        Total Markets
-                                    </Typography>
-                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                        {globalStats.totalMarkets}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                        <Grid item sm={4}>
-                            <Card sx={{ minWidth: 275 }}>
-                                <CardContent>
-                                    <Typography variant="h5" component="div">
-                                        Total Exchanges
-                                    </Typography>
-                                    <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-                                        {globalStats.totalExchanges}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
+                <Grid container display="flex" spacing={2}>
+                    <Grid item sm={4}>
+                        <Card >
+                            <CardContent>
+                                <Typography variant="h5" component="div">
+                                    Total Cryptocurrencies
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                    {globalStats.totalCoins}
+                                </Typography>
+                            </CardContent>
+                        </Card>
                     </Grid>
-                    
+                    <Grid item sm={4}>
+                        <Card>
+                            <CardContent>
+                                <Typography variant="h5" component="div">
+                                    Total Markets
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                    {globalStats.totalMarkets}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                    <Grid item sm={4}>
+                        <Card sx={{ minWidth: 275 }}>
+                            <CardContent>
+                                <Typography variant="h5" component="div">
+                                    Total Exchanges
+                                </Typography>
+                                <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+                                    {globalStats.totalExchanges}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
                 </Grid>
 
             </div>
