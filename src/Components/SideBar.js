@@ -136,7 +136,7 @@ export default function SideBar() {
         <Divider />
         <List>
             <ListItem key="Home" disablePadding>
-              <ListItemButton component={Link} to="/" onClick={handleDrawerClose}>
+              <ListItemButton component={Link} to="/CRYPTOVERSE/" onClick={handleDrawerClose}>
                 <ListItemIcon>
                   <HomeIcon color="primary" />
                 </ListItemIcon>
