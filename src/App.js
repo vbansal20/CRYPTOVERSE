@@ -17,6 +17,7 @@ function App() {
         <SideBar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/CRYPTOVERSE/" element={<Home/>} />
           <Route path="/cryptocurrencies" element={<CryptoCoins />} />
           <Route path="/exchanges" element={<Exchanges />} />
           <Route path="/news" element={<News />} />
